@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Yeni Dağıtım</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>50</y>
+     <width>301</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="daTMYapLacakUbelerLabel">
+      <property name="text">
+       <string>Dağıtım Yapılacak Şubeler</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="daTMYapLacakUbelerComboBox"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="daTMYapLacakSNFlarLabel">
+      <property name="text">
+       <string>Dağıtım Yapılacak Sınıflar</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="daTMYapLacakSNFlarComboBox"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="ortakSNavSaySLabel">
+      <property name="text">
+       <string>Ortak Sınav Sayısı</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSpinBox" name="ortakSNavSaySSpinBox"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="sNavGruplarNSeInizLabel">
+      <property name="text">
+       <string>Sınav Gruplarını Seçiniz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="sNavGruplarNSeInizComboBox"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>160</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dağıtımı Yap</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
