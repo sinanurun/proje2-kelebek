@@ -1,6 +1,7 @@
 from ansayfa_ui import Ui_Anaekran
 from kurum_bilgileri_guncelleme_ui import *
 from kurum_bilgileri import *
+from subebilgileriguncelleme import *
 
 
 class Anapencere(QMainWindow,Ui_Anaekran):
@@ -9,7 +10,7 @@ class Anapencere(QMainWindow,Ui_Anaekran):
         self.setupUi(self)
         # self.show()
         self.OkulBilgileriGuncelle.triggered.connect(self.obg)
-        # self.SubeisimleriGuncelle.triggered.connect(self.sbg)
+        self.SubeisimleriGuncelle.triggered.connect(self.sbg)
         # self.SubeListesi.triggered.connect(self.sl)
         # self.SinavyeriGuncelle.triggered.connect(self.syg)
         # self.KapasiteGuncelle.triggered.connect(self.kg)
@@ -22,6 +23,8 @@ class Anapencere(QMainWindow,Ui_Anaekran):
         self.obgekrani = Kurumbg()
         self.setCentralWidget(self.obgekrani)
     def sbg(self):
+        self.sbgekrani = Sube_bilgi_guncelle()
+        self.setCentralWidget(self.sbgekrani)
         pass
     def sl(self):
         pass

@@ -13,25 +13,31 @@ class Kurumbg(Kgb_form):
 
     def bilgileri_getir(self):
         self.kgirisi = kurumbilgileri()
+
         self.kurum_kodu.setText(str(self.kgirisi.kurum_kodu))
         self.kurum_sifresi.setText(str(self.kgirisi.kurum_sifre))
         self.kurum_adi.setText(str(self.kgirisi.kurum_adi))
         self.sube_sayisi.setText(str(self.kgirisi.sube_sayisi))
         self.sinav_yeri_sayisi.setText(str(self.kgirisi.fsinif_sayisi))
+        self.eskikod = str(self.kgirisi.kurum_kodu)
+
 
     def guncelle(self):
-        d = {self.kgirisi.kurum_sifre:self.kurum_sifresi.text(),
-             self.kgirisi.kurum_adi:self.kurum_adi.text(),
-             self.kgirisi.sube_sayisi:self.sube_sayisi.text(),
-             self.kgirisi.fsinif_sayisi:self.sinav_yeri_sayisi.text()}
-        kgb_guncelle(d)
+        keys = self.kgirisi.__table__.columns.keys()
+        values = [int(self.kurum_kodu.text()),
+             self.kurum_adi.text(),
+             self.kurum_sifresi.text(),
+             int(self.sube_sayisi.text()),
+             int(self.sinav_yeri_sayisi.text())]
+        d = dict(zip(keys,values))
+        d["eski"]=self.eskikod
+        kgb_guncelle(**d)
 
         # kgb_guncelle(self.kurum_kodu.text(),
         #             self.kurum_sifresi.text(),
         #             self.kurum_adi.text(),
         #             self.sube_sayisi.text(),
         #             self.sinav_yeri_sayisi.text())
-
 
         # print(self.ekran.kurum_kodu.)
 
@@ -40,7 +46,7 @@ class Kurumbg(Kgb_form):
 
 
 
-app = QApplication(sys.argv)
-giris = Kurumbg()
-giris.show()
-sys.exit(app.exec_())
+# app = QApplication(sys.argv)
+# giris = Kurumbg()
+# giris.show()
+# sys.exit(app.exec_())
