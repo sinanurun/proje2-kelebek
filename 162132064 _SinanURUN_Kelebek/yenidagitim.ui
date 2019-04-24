@@ -6,70 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>803</width>
+    <height>399</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Yeni Dağıtım</string>
   </property>
-  <widget class="QWidget" name="formLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>50</y>
-     <width>301</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="daTMYapLacakUbelerLabel">
-      <property name="text">
-       <string>Dağıtım Yapılacak Şubeler</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QComboBox" name="daTMYapLacakUbelerComboBox"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="daTMYapLacakSNFlarLabel">
-      <property name="text">
-       <string>Dağıtım Yapılacak Sınıflar</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QComboBox" name="daTMYapLacakSNFlarComboBox"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="ortakSNavSaySLabel">
-      <property name="text">
-       <string>Ortak Sınav Sayısı</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QSpinBox" name="ortakSNavSaySSpinBox"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="sNavGruplarNSeInizLabel">
-      <property name="text">
-       <string>Sınav Gruplarını Seçiniz</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QComboBox" name="sNavGruplarNSeInizComboBox"/>
-    </item>
-   </layout>
-  </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>160</y>
+     <x>720</x>
+     <y>360</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -77,6 +25,194 @@
    <property name="text">
     <string>Dağıtımı Yap</string>
    </property>
+  </widget>
+  <widget class="QTabWidget" name="tab_bilgialanlari">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>761</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="bilgialanlari" native="true">
+    <attribute name="title">
+     <string>Bilgi Alanlari</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sınav Adı Giriniz</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="sinav_adi">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>20</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Yapılacak Sınav Sayısını Giriniz</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="sinav_tablosu_01">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>70</y>
+       <width>401</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>200</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Sınav Sayısı</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Sınav Adı * Mutlaka Doldurun</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>140</y>
+       <width>251</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{rgb(255, 0, 0)}</string>
+     </property>
+     <property name="text">
+      <string>Bilgileri Tam ve Eksiksiz Giriniz</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sinav_sayisi">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="sube_bilgileri" native="true">
+    <attribute name="title">
+     <string>Şube Bilgileri</string>
+    </attribute>
+    <widget class="QTableWidget" name="sinav_tablosu_02">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>741</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>Şube Adı</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>0</y>
+       <width>171</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Şubeler İçin Sınav Tercih Ediniz</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="sinav_yerleri" native="true">
+    <attribute name="title">
+     <string>Sınav Yerleri</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>20</y>
+       <width>221</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>Salon Adı</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Salon Seçimi</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>171</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sınav Yapılacak Salonları Seçiniz</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources/>

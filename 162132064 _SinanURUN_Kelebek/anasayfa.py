@@ -1,9 +1,9 @@
-from ansayfa_ui import Ui_Anaekran
+from anasayfa_ui import Ui_Anaekran
 from kurum_bilgileri_guncelleme_ui import *
 from kurum_bilgileri import *
 from subebilgileriguncelleme import *
 from fizikisinifguncelleme import *
-
+from ydagitim import *
 
 class Anapencere(QMainWindow,Ui_Anaekran):
     def __init__(self):
@@ -15,7 +15,7 @@ class Anapencere(QMainWindow,Ui_Anaekran):
         # self.SubeListesi.triggered.connect(self.sl)
         self.SinavyeriGuncelle.triggered.connect(self.syg)
         # self.KapasiteGuncelle.triggered.connect(self.kg)
-        # self.YeniDagitim.triggered.connect(self.yd)
+        self.YeniDagitim_2.triggered.connect(self.yd)
         # self.EskiDagitimlar.triggered.connect(self.ed)
 
 
@@ -34,7 +34,8 @@ class Anapencere(QMainWindow,Ui_Anaekran):
     def kg(self):
         pass
     def yd(self):
-        pass
+        self.yd = Yeni_Datigim()
+        self.setCentralWidget(self.yd)
     def ed(self):
         pass
 

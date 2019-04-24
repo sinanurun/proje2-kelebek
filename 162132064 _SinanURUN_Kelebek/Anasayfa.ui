@@ -109,12 +109,7 @@
     <property name="title">
      <string>Dağıtım</string>
     </property>
-    <widget class="QMenu" name="YeniDagitim">
-     <property name="title">
-      <string>Yeni Dağıtım</string>
-     </property>
-    </widget>
-    <addaction name="YeniDagitim"/>
+    <addaction name="YeniDagitim_2"/>
     <addaction name="EskiDagitimlar"/>
    </widget>
    <addaction name="menuBilgiler"/>
@@ -159,6 +154,11 @@
   <action name="cikis">
    <property name="text">
     <string>Çıkış</string>
+   </property>
+  </action>
+  <action name="YeniDagitim_2">
+   <property name="text">
+    <string>Yeni Dağıtım</string>
    </property>
   </action>
  </widget>
