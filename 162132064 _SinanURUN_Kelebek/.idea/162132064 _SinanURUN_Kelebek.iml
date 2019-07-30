@@ -6,6 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="sqlorm" />
     <orderEntry type="module" module-name="Ayu_Proje_facebook" />
+    <orderEntry type="module" module-name="bim_destek" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="pytest" />

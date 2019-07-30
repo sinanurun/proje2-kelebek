@@ -71,6 +71,36 @@
       <height>192</height>
      </rect>
     </property>
+    <column>
+     <property name="text">
+      <string>Dağıtım Adı</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Dağıtım Tarihi</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Sınıf Listesi</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Salon Listesi</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Toplu Liste</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Dağıtımı Sil</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

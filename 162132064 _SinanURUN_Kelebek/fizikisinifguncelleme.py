@@ -56,15 +56,21 @@ class Fiziki_bilgi_guncelle(QtWidgets.QWidget):
 
 
         for satir in range(self.tablo.rowCount()):
-            ogren = FizikiSinif(fsinif_adi=self.tablo.item(satir,0).text(),fsinif__mevcut=int(self.tablo.item(satir,1).text()))
+            if self.tablo.item(satir,1).text() != 'None':
+
+                ogren = FizikiSinif(fsinif_adi=self.tablo.item(satir,0).text(),fsinif__mevcut=int(self.tablo.item(satir,1).text()))
+            else:
+                ogren = FizikiSinif(fsinif_adi=self.tablo.item(satir, 0).text(),
+                                    fsinif__mevcut=0)
             session.add(ogren)
             session.commit()
+        return self.__init__()
 
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     Form = QtWidgets.QWidget()
-#     ui = Fiziki_bilgi_guncelle()
-#     ui.show()
-#     sys.exit(app.exec_())
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Form = QtWidgets.QWidget()
+    ui = Fiziki_bilgi_guncelle()
+    ui.show()
+    sys.exit(app.exec_())
 

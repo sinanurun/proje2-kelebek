@@ -7,11 +7,11 @@ session = DBSession()
 
 
 def kurum_girisi(kkodu,sifre):
-    print(kkodu,sifre)
+    # print(kkodu,sifre)
     kgirisi = session.query(Kurum).filter(Kurum.kurum_kodu == kkodu, Kurum.kurum_sifre == sifre).first()
     try:
         if (kgirisi.kurum_adi) :
-            print(kgirisi.kurum_adi)
+            # print(kgirisi.kurum_adi)
             return True
     except:
         return False
